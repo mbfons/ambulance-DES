@@ -1,0 +1,13 @@
+*.Rproj.user
+*.Rhistory
+*.RData
+*.Ruserdata
+.Rproj.user/
+Rproj.user/
+.Rproj.user
+*.gif
+*.webm
+*.RDS
+libs/
+TAHA_DES_notes_files/
+
