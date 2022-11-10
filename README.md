@@ -1,5 +1,9 @@
 ![image](https://user-images.githubusercontent.com/69211911/201057636-1297a791-62a3-4267-89a5-a074c28cbab3.png)
 
+[![status: experimental](https://github.com/GIScience/badges/raw/master/status/experimental.svg)](https://github.com/GIScience/badges#experimental)
+
+**Not government policy**
+
  ## Context 
 
 Ambulance handover problems have been dominating the Urgent & Emergency Care (UEC) space. There are currently large handover delays, with a lot of people waiting a long time to be admitted into the emergency department (ED). 
@@ -28,6 +32,11 @@ on:
 * calls queued
 * call response times.
 
+An overview of the response time problem restated as a queue is given below. Queues for ambulances to handover at the site can also emerge.
+
+<img src="./Contextuals/responsetime_as_queue.PNG" alt="" width="1000"/>
+
+
 ## Implementation
 
 We use R `simmer` to formulate the problem as a set of queues / discreve event simulation.
@@ -37,13 +46,18 @@ This calls on `01-packages.R` to load the packages and `03-replication_v08.R` fo
 
 `08-process-viz.R` leverages the `bupaR` package for some process mining and visualisation, leveraging outputted event logs from the main model.
 
+An example process map (showing median times) can be seen below. An animated version can be found by clicking on the image or [here](https://mbfons.github.io/ambulance-DES/Output/20221103_A_ppt/map-absolute_crep1id5_2022-11-09_self.html).
+
+<a href="https://mbfons.github.io/ambulance-DES/Output/20221103_A_ppt/map-absolute_crep1id5_2022-11-09_self.html" target="_blank"><img src="./Output/20221103_A_ppt/map-medianrep1id5.png" 
+alt="" width="1000" border="10" /></a>
+
 ## Example outputs
 
 Example outputs are show below.
 
-Setup A2 considers a stylistic hospital, where demand is of 180 calls per day and 23 vehicles are available. Realistic job cycle time components are set (mostly fixed, but with handover time following a lognormal distribution).
+Setup A2 considers a stylistic hospital, where demand is of 180 calls per day and 23 vehicles are available. Realistic job cycle time components are set (mostly fixed, but with handover time following a lognormal distribution). All parameters and script can be found in [MAIN_simmer_v08_EXAMPLEpresets-20221103_A_ppt.R](MAIN_simmer_v08_EXAMPLEpresets-20221103_A_ppt.R).
 
-Setup B assumes similar settings but includes a hypothetical intervention where staff of an ambulance (2 staff members) could be reassigned to the hospital site to support with handover bays (3 bays per staff), on a shift by shift basis (1 ambulance : 6 site bays). It is assumed that this can reduce ambulance handover time by 90%, subject to bay availability.
+Setup B assumes similar settings but includes a hypothetical intervention where staff of an ambulance (2 staff members) could be reassigned to the hospital site to support with handover bays (3 bays per staff), on a shift by shift basis (1 ambulance : 6 site bays). It is assumed that this can reduce ambulance handover time by 90%, subject to bay availability. All parameters and script can be found in [MAIN_simmer_v08_EXAMPLEpresets-20221103_trigger.R](MAIN_simmer_v08_EXAMPLEpresets-20221103_trigger.R).
 
 * Redeployment from ambulance to bays is dynamically triggered if ambulance site queues exceed a given threshold.
 * Redeployment from bays to ambulance is dynamically triggered if the above threshold is not reached AND bays are being underutilised AND call queues exceed a given threshold.
@@ -70,3 +84,7 @@ Setup B assumes similar settings but includes a hypothetical intervention where 
 
 Distributed under the MIT License. _See [LICENSE](./LICENSE) for more information._
 
+
+## Contact
+
+If you have any  questions please contact **[Martina Fonseca](mailto:stephen.richer@nhs.net)**.
