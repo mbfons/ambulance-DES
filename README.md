@@ -87,4 +87,4 @@ Distributed under the MIT License. _See [LICENSE](./LICENSE) for more informatio
 
 ## Contact
 
-If you have any  questions please contact **[Martina Fonseca](mailto:stephen.richer@nhs.net)**.
+If you have any  questions please contact **[Martina Fonseca](mailto:martina.fonseca@nhs.net)**.
