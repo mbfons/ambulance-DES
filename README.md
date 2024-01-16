@@ -4,6 +4,9 @@
 
 **Not government policy**
 
+<img src="./Contextuals/simulation_badge_M.png"  width="150">
+<p>
+
  ## Context 
 
 Ambulance handover problems have been dominating the Urgent & Emergency Care (UEC) space. There are currently large handover delays, with a lot of people waiting a long time to be admitted into the emergency department (ED). 
@@ -36,8 +39,20 @@ An overview of the response time problem restated as a queue is given below. Que
 
 <img src="./Contextuals/responsetime_as_queue.PNG" alt="" width="1000"/>
 
+## Getting Started
 
-## Implementation
+### Installation
+
+To get a local copy up and running follow these simple steps.
+To clone the repo:
+
+`git clone https://github.com/nhsx/ambulance-DES`
+
+Launch the `ambulance-DES-main.Rproj` file in a suitable IDE (e.g. RStudio).  
+
+The required packages are stored in `packages.R`.
+
+### Implementation
 
 We use R `simmer` to formulate the problem as a set of queues / discreve event simulation.
 
@@ -80,6 +95,17 @@ Setup B assumes similar settings but includes a hypothetical intervention where 
 <img src="./Output/20221103_trigger_ppt/sitequeueplot20221103_trigger_ppt_id1.png" width="600"/>
 
 
+## Contributing
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+_See [CONTRIBUTING.md](./CONTRIBUTING.md) for detailed guidance._
+
 ## License
 
 Distributed under the MIT License. _See [LICENSE](./LICENSE) for more information._
@@ -87,4 +113,4 @@ Distributed under the MIT License. _See [LICENSE](./LICENSE) for more informatio
 
 ## Contact
 
-If you have any  questions please contact **[Martina Fonseca](mailto:martina.fonseca@nhs.net)**.
+To find out more about the legacy [DART](https://www.nhsx.nhs.uk/key-tools-and-info/nhsx-analytics-unit/) and the new Data Science team visit our [signposting website](https://nhsengland.github.io/DataScience-Signpost/) or get in touch via [datascience@nhs.net](mailto:datascience@nhs.net).
